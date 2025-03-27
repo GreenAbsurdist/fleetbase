@@ -30,6 +30,7 @@ Router.map(function () {
         this.route('account', function () {
             this.route('virtual', { path: '/:slug' });
             this.route('auth');
+            this.route('organizations');
         });
         this.route('settings', function () {
             this.route('virtual', { path: '/:slug' });
@@ -59,6 +60,36 @@ Router.map(function () {
             this.route('schedule-monitor', function () {
                 this.route('logs', { path: '/:id/logs' });
             });
+        });
+
+        this.mount('@fleetbase/dev-engine', {
+            as: 'developers',
+            path: 'developers'
+        });
+
+        this.mount('@fleetbase/iam-engine', {
+            as: 'iam',
+            path: 'iam'
+        });
+
+        this.mount('@fleetbase/fleetops-engine', {
+            as: 'fleet-ops',
+            path: 'fleet-ops'
+        });
+
+        this.mount('@fleetbase/storefront-engine', {
+            as: 'storefront',
+            path: 'storefront'
+        });
+
+        this.mount('@fleetbase/registry-bridge-engine', {
+            as: 'extensions',
+            path: 'extensions'
+        });
+
+        this.mount('@test/testextension-engine', {
+            as: 'testextension',
+            path: 'testextension'
         });
     });
     this.route('catch', { path: '/*' });

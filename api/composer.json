@@ -41,6 +41,10 @@
         {
             "type": "composer",
             "url": "https://registry.fleetbase.io"
+        },
+        {
+            "type": "path",
+            "url": "../packages/testextension"
         }
     ],
     "autoload": {
