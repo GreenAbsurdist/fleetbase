@@ -44,4 +44,4 @@
 	url = git@github.com:fleetbase/ledger.git
 [submodule "packages/testextension"]
 	path = packages/testextension
-	url = git@github.com:GreenAbsurdist/testextension
+	url = git@github.com:GreenAbsurdist/testextension.git
